@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "katie-baking-app-env"
+version = "0.1.0"
+description = "An environment for Katie's baking app."
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~=3.11.0"
+streamlit = "^1.50.0"
+pandas = "^2.3.3"
+plotly = "^6.3.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
