@@ -13,7 +13,8 @@ if PRODUCT_TERM and ZIPCODE:
     with st.spinner(f"Searching for '{PRODUCT_TERM}' in zip code {ZIPCODE}..."):
         try:
             # 1. Access the secret from st.secrets
-            kroger_credentials = st.secrets["kroger"]["CLIENT_CREDENTIALS"]
+            # Note: streamlit community cloud secrets uses lower case for variable names
+            kroger_credentials = st.secrets["kroger"]["client_credentials"]
 
             # We use subprocess.run to execute the shell script.
             # 2. Pass the user input and the secret as arguments to the script.
